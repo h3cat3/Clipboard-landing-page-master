@@ -1,0 +1,114 @@
+:root {
+  /* Colors */
+  --Green-500: hsl(171, 66%, 44%);
+  --Blue-100: hsl(233, 100%, 69%);
+  --Gray700: hsl(210, 10%, 33%);
+  --Gray-500: hsl(201, 11%, 66%);
+}
+
+/*font family*/
+@font-face {
+  font-family: "Bai Jamjuree";
+  src: url(../font/Bai_Jamjuree/BaiJamjuree-Regular.ttf);
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 1.125rem;
+  color: var(--Gray700);
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  margin-inline: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+/* COMPOSITION */
+.card {
+  max-width: 70rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 5vw, 5rem);
+}
+
+.box {
+  margin-top: clamp(1.5rem, 5vw, 5rem);
+}
+
+.cluster {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media (min-width: 64rem) {
+  .cluster {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* UTILITIES */
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  border: none;
+  font-size: inherit;
+  background-color: var(--Green-500);
+  box-shadow: var(--Gray-500) 5px 5px 5px 5px;
+}
+.btn:hover {
+  color: white;
+  box-shadow: var(--Gray700) 2px 2px 2px 2px;
+}
+
+.description {
+  color: var(--Gray-500);
+  max-width: 30rem;
+  margin-inline: auto;
+}
+
+/* BLOCKS */
+/* EXCEPTIONS */
+.btn--blue {
+  background-color: var(--Blue-100);
+}
+
+@media (min-width: 64rem) {
+  .left {
+    margin-left: -10rem;
+  }
+}
+
+.footer-logo {
+  max-height: 10%;
+  max-width: 10%;
+}
+@media (min-width: 64rem) {
+  .footer-logo {
+    max-width: 3rem;
+    max-height: 3rem;
+    margin: 0;
+  }
+}
+
+.cluster--footer {
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */

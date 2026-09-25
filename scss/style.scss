@@ -1,0 +1,92 @@
+@use "_design-tokens" as *;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 1.125rem;
+    color: var(--Gray700);
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin-inline: auto;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+/* COMPOSITION */
+
+.card {
+    max-width: 70rem;
+    margin-inline: auto;
+    padding-inline: clamp(1.5rem, 5vw, 5rem);
+}
+.box {
+    margin-top: clamp(1.5rem, 5vw, 5rem);
+}
+.cluster {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    @media (min-width: 64rem) {
+        flex-direction: row; 
+        justify-content: center;
+    }   
+}
+/* UTILITIES */
+.btn{
+    
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    border: none;
+    font-size: inherit;
+    background-color: var(--Green-500);
+    box-shadow: var(--Gray-500) 5px 5px 5px 5px;
+    &:hover{
+        color: white;
+        box-shadow: var(--Gray700) 2px 2px 2px 2px;
+    }
+}
+.description {
+    color: var(--Gray-500);
+    max-width: 30rem;
+    margin-inline: auto;
+}
+/* BLOCKS */
+/* EXCEPTIONS */
+.btn--blue {
+    background-color: var(--Blue-100);
+}
+.left {
+    @media (min-width: 64rem) {
+        margin-left: -10rem;
+    }
+}
+.footer-logo{
+    max-height: 10%;
+    max-width: 10%;
+    @media (min-width:64rem)  {
+        max-width: 3rem;
+        max-height: 3rem;
+        margin: 0;
+    }
+}
+.cluster--footer{
+    align-items: center;
+}
